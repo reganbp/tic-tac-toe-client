@@ -17,6 +17,10 @@ $(() => {
   $('#ticSeven').on('click', authEvents.onClick7)
   $('#ticEight').on('click', authEvents.onClick8)
   $('#ticNine').on('click', authEvents.onClick9)
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
+  $('#change-password-form').on('submit', authEvents.onChangePw)
+  $('#sign-out').on('click', authEvents.onSignOut)
 })
 
 // All below most likeley needs to go to be moved to a new file later
