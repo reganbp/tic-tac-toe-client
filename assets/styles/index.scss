@@ -21,6 +21,7 @@ body {
 .box {
   border: 2px solid $white;
   height: 160px;
+  vertical-align: center;
 }
 
 .grey {
@@ -38,4 +39,22 @@ body {
 
 .modal-title {
   font-size: 30px;
+}
+
+.turn {
+  font-size: 20px;
+}
+
+.wrapper {
+  align-items: stretch;
+  display: flex;
+}
+
+nav > .sidebar {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+#sidebar.active {
+  margin-left: -250px;
 }

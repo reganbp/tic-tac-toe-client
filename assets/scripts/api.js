@@ -38,10 +38,21 @@ const signOut = function () {
   })
 }
 
+const newGame = function () {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/games',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePw,
-  signOut
+  signOut,
+  newGame
 
 }

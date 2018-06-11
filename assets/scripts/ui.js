@@ -21,6 +21,12 @@ const signOutSuccess = function (response) {
 const signOutFailure = function (signOutError) {
   console.log('The sign in error is ', signOutError)
 }
+const newGameSuccess = function (newGameResponse) {
+  console.log('You have started a new game', newGameResponse)
+}
+const newGameFailure = function (newGameResponse) {
+  console.log('You have made an error', newGameResponse)
+}
 
 module.exports = {
   signUpSuccess,
@@ -28,5 +34,7 @@ module.exports = {
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  newGameSuccess,
+  newGameFailure
 }
