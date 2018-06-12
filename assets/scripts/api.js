@@ -48,11 +48,33 @@ const newGame = function () {
   })
 }
 
+const updateGame = function (index, value, endGame) {
+  console.log(index, value, endGame)
+  console.log(store.game)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/games/' + store.game.id,
+    data: {
+      'game': {
+        'cell': {
+          'index': index,
+          'value': value
+        },
+        'over': endGame
+      }
+    },
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePw,
   signOut,
-  newGame
+  newGame,
+  updateGame
 
 }

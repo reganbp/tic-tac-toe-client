@@ -23,9 +23,16 @@ const signOutFailure = function (signOutError) {
 }
 const newGameSuccess = function (newGameResponse) {
   console.log('You have started a new game', newGameResponse)
+  store.game = newGameResponse.game
 }
 const newGameFailure = function (newGameResponse) {
   console.log('You have made an error', newGameResponse)
+}
+const updateSuccess = function (updateResponse) {
+  console.log('I have been updated', updateResponse)
+}
+const updateFailure = function (updateResponse) {
+  console.log('Failure is an option', updateResponse)
 }
 
 module.exports = {
@@ -36,5 +43,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   newGameSuccess,
-  newGameFailure
+  newGameFailure,
+  updateSuccess,
+  updateFailure
 }

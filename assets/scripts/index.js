@@ -23,4 +23,5 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('.play-again').on('click', authEvents.onPlayAgain)
   $('#username').on('click', authEvents.onUsername)
+  $('.update-game').on('click', authEvents.onUpdateGame)
 })
