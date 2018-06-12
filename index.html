@@ -91,15 +91,39 @@
   </div>
 </div>
 
+<div class="modal fade" id="rules-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Rules</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      The goal of Tic-Tac-Toe is to get three boxes in a row, column, or diagonal.  Players will take turns filling in the boxes, and try and give themselves a three in a row.  If either player gets three in row the game is over, even if there are more empty boxes.
+
+      Log in or sign up, and hit New Game to play.
+      Have Fun!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
       <h1>Welcome To Tic-Tac-Toe</h1>
       <section>Please log-in and click on New Game to play.
       </section>
 
 
     <section>
-      <button type="button" class="play-again">New Game</button>
-      <button type="button" class="get-games">Get Games</button>
-      <button id='sign-out'>Sign Out</button>
+      <button type="button" class="rules btn btn-light" data-toggle="modal" data-target="#rules-modal">Rules</button>
+      <button type="button" class="play-again btn btn-light">New Game</button>
+      <button type="button" class="get-games btn btn-light">Get Games</button>
+      <button id='sign-out' class="sign-out btn btn-light">Sign Out</button>
     </section>
 
       <section class="turn" id="turn">Turn: </section>
@@ -117,6 +141,17 @@
           <div class="col-xs-4 box grey" id="ticSeven"></div>
           <div class="col-xs-4 box grey" id="ticEight"></div>
           <div class="col-xs-4 box grey" id="ticNine"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 white" id="score">Scores</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 white" id="playOneScore">Player One</div>
+          <div class="col-xs-6 white" id="playTwoScore">Player Two</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 white" id="scoreOne">0</div>
+          <div class="col-xs-6 white" id="scoreTwo">0</div>
         </div>
 
 

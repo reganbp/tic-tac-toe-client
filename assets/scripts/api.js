@@ -37,7 +37,6 @@ const signOut = function () {
     }
   })
 }
-
 const newGame = function () {
   return $.ajax({
     method: 'POST',
@@ -47,7 +46,6 @@ const newGame = function () {
     }
   })
 }
-
 const updateGame = function (index, value, endGame) {
   console.log(index, value, endGame)
   console.log(store.game)
