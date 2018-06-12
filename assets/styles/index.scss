@@ -19,9 +19,11 @@ body {
 }
 
 .box {
+  align-items: center;
   border: 2px solid $white;
+  display: flex;
   height: 160px;
-  vertical-align: center;
+  justify-content: center;
 }
 
 .grey {
