@@ -34,7 +34,12 @@ const updateSuccess = function (updateResponse) {
 const updateFailure = function (updateResponse) {
   console.log('Failure is an option', updateResponse)
 }
-
+const getGameSuccess = function (getResponse) {
+  console.log('get game is', getResponse)
+}
+const getGameFailure = function (getResponse) {
+  console.log('failed to get games', getResponse)
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -45,5 +50,7 @@ module.exports = {
   newGameSuccess,
   newGameFailure,
   updateSuccess,
-  updateFailure
+  updateFailure,
+  getGameSuccess,
+  getGameFailure
 }

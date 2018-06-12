@@ -94,94 +94,84 @@ const determineColor = function (spotRow, spotColumn, player) {
 }
 const onClick1 = function () {
   const value = player
+  const index = 0
+  authApi.updateGame(index, value, endGame)
+    .then(authUi.updateSuccess)
+    .catch(authUi.updateFailure)
   $(this).css('background', determineColor(0, 0, player))
   playGame(0, 0, player)
-  const index = 0
-
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
 }
-
 const onClick2 = function () {
   const value = player
-  $(this).css('background', determineColor(0, 1, player))
-  playGame(0, 1, player)
   const index = 1
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(0, 1, player))
+  playGame(0, 1, player)
 }
 const onClick3 = function () {
   const value = player
-  $(this).css('background', determineColor(0, 2, player))
-  playGame(0, 2, player)
   const index = 2
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(0, 2, player))
+  playGame(0, 2, player)
 }
 const onClick4 = function () {
   const value = player
-  $(this).css('background', determineColor(1, 0, player))
-  playGame(1, 0, player)
   const index = 3
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(1, 0, player))
+  playGame(1, 0, player)
 }
 const onClick5 = function () {
   const value = player
-  $(this).css('background', determineColor(1, 1, player))
-  playGame(1, 1, player)
   const index = 4
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(1, 1, player))
+  playGame(1, 1, player)
 }
 const onClick6 = function () {
   const value = player
-  $(this).css('background', determineColor(1, 2, player))
-  playGame(1, 2, player)
   const index = 5
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(1, 2, player))
+  playGame(1, 2, player)
 }
 const onClick7 = function () {
   const value = player
-  $(this).css('background', determineColor(2, 0, player))
-  playGame(2, 0, player)
   const index = 6
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(2, 0, player))
+  playGame(2, 0, player)
 }
 const onClick8 = function () {
   const value = player
-  $(this).css('background', determineColor(2, 1, player))
-  playGame(2, 1, player)
   const index = 7
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(2, 1, player))
+  playGame(2, 1, player)
 }
 const onClick9 = function () {
   const value = player
-  $(this).css('background', determineColor(2, 2, player))
-  playGame(2, 2, player)
   const index = 8
-
   authApi.updateGame(index, value, endGame)
     .then(authUi.updateSuccess)
     .catch(authUi.updateFailure)
+  $(this).css('background', determineColor(2, 2, player))
+  playGame(2, 2, player)
 }
 const onSignUp = function (event) {
   event.preventDefault()
@@ -242,6 +232,13 @@ const onPlayAgain = function (event) {
     .then(authUi.newGameSuccess)
     .catch(authUi.newGameFailure)
 }
+const onGetGame = function (event) {
+  event.preventDefault()
+  console.log('get games clicked')
+  authApi.getGame()
+    .then(authUi.getGameSuccess)
+    .catch(authUi.getGameFailure)
+}
 
 module.exports = {
   onClick1,
@@ -257,7 +254,6 @@ module.exports = {
   onSignIn,
   onChangePw,
   onSignOut,
-  onPlayAgain
-  // onUpdateGame
-  // onUsername
+  onPlayAgain,
+  onGetGame
 }
