@@ -14,85 +14,95 @@
 
 
     <body class="container">
-      <div class="wrapper">
 
-    <nav id="sidebar">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header">
-            <h3>Collapsible Sidebar</h3>
-        </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">
+        Sign Up
+      </button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-modal">
+        Log In
+      </button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#password-modal">
+        Change Password
+      </button>
 
-        <!-- Sidebar Links -->
-        <ul class="list-unstyled components">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-
-            <li><!-- Link with dropdown items -->
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                </ul>
-
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-</div>
-    <!-- <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+<!-- Modal -->
+<div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form id='sign-up-form'>
+        <input name="credentials[email]" placeholder="Email" type="email">
+        <input name="credentials[password]" placeholder="Password" type="password">
+        <input name="credentials[password_confirmation]" placeholder="Password Confirmation" type="password">
+        <button type="submit">Sign Up</button>
+      </form>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div> -->
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div> -->
-      <!-- <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <form id="sign-up-form">
-            <input name="credentials[email]" placeholder="Email" type="email">
-            <input name="credentials[password]" placeholder="Password" type="password">
-            <input name="credentials[password_confirmation]" placeholder="Password Confirmation" type="password">
-            <button type="submit">Sign Up</button>
-          </form>
-        </div>
-      </nav> -->
+  </div>
+</div>
+
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="sign-in-form">
+          <input name="credentials[email]" placeholder="Email" type="email">
+          <input name="credentials[password]" placeholder="Password" type="password">
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="change-password-form">
+          <input name="passwords[old]" placeholder="Old Password" type="password">
+          <input name="passwords[new]" placeholder="New Password" type="password">
+          <button type="submit">Change Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
       <h1>Welcome To Tic-Tac-Toe</h1>
+      <section>Please log-in and click on New Game to play.
+      </section>
 
-      <h3>Sign Up</h3>
-    <form id='sign-up-form'>
-      <input name="credentials[email]" placeholder="Email" type="email">
-      <input name="credentials[password]" placeholder="Password" type="password">
-      <input name="credentials[password_confirmation]" placeholder="Password Confirmation" type="password">
-      <button type="submit">Sign Up</button>
-    </form>
-    <h3>Sign In</h3>
-    <form id="sign-in-form">
-      <input name="credentials[email]" placeholder="Email" type="email">
-      <input name="credentials[password]" placeholder="Password" type="password">
-      <button type="submit">Sign In</button>
-    </form>
-    <h3>Change Password</h3>
-    <form id="change-password-form">
-      <input name="passwords[old]" placeholder="Old Password" type="password">
-      <input name="passwords[new]" placeholder="New Password" type="password">
-      <button type="submit">Change Password</button>
-    </form>
+
     <section>
+      <button type="button" class="play-again">New Game</button>
+      <button type="button" class="get-games">Get Games</button>
       <button id='sign-out'>Sign Out</button>
     </section>
 
-      <section class="turn" id="turn">Turn: Player One </section>
+      <section class="turn" id="turn">Turn: </section>
       <div class="row">
           <div class="col-xs-4 box grey" id="ticOne"></div>
           <div class="col-xs-4 box grey" id="ticTwo"></div>
@@ -109,8 +119,6 @@
           <div class="col-xs-4 box grey" id="ticNine"></div>
         </div>
 
-        <button type="button" class="play-again">Play again?</button>
-        <button type="button" class="get-games">Get Games</button>
 
     </body>
 </html>
