@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,106 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Browser Template</h1>
+
+
+    <body class="container">
+      <div class="wrapper">
+
+    <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>Collapsible Sidebar</h3>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+
+            <li><!-- Link with dropdown items -->
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">Page</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li><a href="#">Page</a></li>
+                </ul>
+
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
+    <!-- <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div> -->
+      <!-- <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <form id="sign-up-form">
+            <input name="credentials[email]" placeholder="Email" type="email">
+            <input name="credentials[password]" placeholder="Password" type="password">
+            <input name="credentials[password_confirmation]" placeholder="Password Confirmation" type="password">
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </nav> -->
+
+      <h1>Welcome To Tic-Tac-Toe</h1>
+
+      <h3>Sign Up</h3>
+    <form id='sign-up-form'>
+      <input name="credentials[email]" placeholder="Email" type="email">
+      <input name="credentials[password]" placeholder="Password" type="password">
+      <input name="credentials[password_confirmation]" placeholder="Password Confirmation" type="password">
+      <button type="submit">Sign Up</button>
+    </form>
+    <h3>Sign In</h3>
+    <form id="sign-in-form">
+      <input name="credentials[email]" placeholder="Email" type="email">
+      <input name="credentials[password]" placeholder="Password" type="password">
+      <button type="submit">Sign In</button>
+    </form>
+    <h3>Change Password</h3>
+    <form id="change-password-form">
+      <input name="passwords[old]" placeholder="Old Password" type="password">
+      <input name="passwords[new]" placeholder="New Password" type="password">
+      <button type="submit">Change Password</button>
+    </form>
+    <section>
+      <button id='sign-out'>Sign Out</button>
+    </section>
+
+      <section class="turn" id="turn">Turn: Player One </section>
+      <div class="row">
+          <div class="col-xs-4 box grey" id="ticOne"></div>
+          <div class="col-xs-4 box grey" id="ticTwo"></div>
+          <div class="col-xs-4 box grey" id="ticThree"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 box grey" id="ticFour"></div>
+          <div class="col-xs-4 box grey" id="ticFive"></div>
+          <div class="col-xs-4 box grey" id="ticSix"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 box grey" id="ticSeven"></div>
+          <div class="col-xs-4 box grey" id="ticEight"></div>
+          <div class="col-xs-4 box grey" id="ticNine"></div>
+        </div>
+
+        <button type="button" class="play-again">Play again?</button>
+        <button type="button" class="get-games">Get Games</button>
+
     </body>
 </html>
