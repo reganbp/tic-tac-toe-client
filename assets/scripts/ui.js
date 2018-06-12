@@ -38,6 +38,7 @@ const updateFailure = function (updateResponse) {
 }
 const getGameSuccess = function (getResponse) {
   console.log('get game is', getResponse)
+  // $('#gameshow').html('You have played ' + store.game.length + 1 + ' games')
 }
 const getGameFailure = function (getResponse) {
   console.log('failed to get games', getResponse)
