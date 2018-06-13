@@ -207,12 +207,8 @@ const onChangePw = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   authApi.changePw(data)
-    .then(function () {
-      console.log('response is ', data)
-    })
-    .catch(function (error) {
-      console.log('response is ', error)
-    })
+    .then(authUi.passwordPass)
+    .catch(authUi.passwordFail)
 }
 const onSignOut = function (event) {
   event.preventDefault()
