@@ -1,7 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
+$purplish: #3f364e;
 $background-color: #4e4e4e;
 $font-color: #dfdfdf;
 $white: #fff;
@@ -18,10 +18,21 @@ body {
   text-align: center;
 }
 
+section {
+  margin: 10px auto;
+}
+
 .box {
+  align-items: center;
   border: 2px solid $white;
+  display: flex;
+  font-size: 200%;
   height: 160px;
-  vertical-align: center;
+  justify-content: center;
+}
+
+.get-games {
+  color: $black;
 }
 
 .grey {
@@ -41,8 +52,29 @@ body {
   font-size: 30px;
 }
 
+.play-again {
+  color: $black;
+}
+
+.rules {
+  color: $black;
+}
+
+.sign-out {
+  color: $black;
+}
+
 .turn {
   font-size: 20px;
+}
+
+.white {
+  align-items: center;
+  background-color: $background-color;
+  color: $font-color;
+  display: flex;
+  font-size: 200%;
+  justify-content: center;
 }
 
 .wrapper {
@@ -50,10 +82,10 @@ body {
   display: flex;
 }
 
-nav > .sidebar {
-  max-width: 250px;
-  min-width: 250px;
-}
+// nav > .sidebar {
+//   max-width: 250px;
+//   min-width: 250px;
+// }
 //
 // #sidebar.active {
 //   margin-left: -250px;

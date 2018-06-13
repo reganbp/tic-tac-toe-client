@@ -8,19 +8,33 @@ const authUi = require('./ui')
 const gameBoard = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 const playerOne = 'X'
 const playerTwo = 'O'
+let playerX = 0
+let playerO = 0
 let player = playerOne
 let endGame = false
+
 const win = function (winner) {
   if (winner === playerOne) {
-    $('.box').html('Black Squares Win!!!!')
+    // $('.box').html('Black Squares Win!!!!')
     $('#turn').html('Player One is the winner!!')
+    playerX++
+    console.log(playerX)
   } else {
-    $('.box').html('White Squares Win!!!!')
+    // $('.box').html('White Squares Win!!!!')
     $('#turn').html('Player Two is the winner!!')
+    playerO++
+    console.log(playerO)
   }
-  $('.box').css('background', 'red')
+  $('.box').css('background', '#b92f2f')
+  $('#ticOne').html('Y')
+  $('#ticTwo').html('O')
+  $('#ticThree').html('U')
+  $('#ticSeven').html('W')
+  $('#ticEight').html('O')
+  $('#ticNine').html('N')
+  $('#scoreOne').html(playerX)
+  $('#scoreTwo').html(playerO)
 }
-
 const playGame = function (spotRow, spotColumn, whoIs) {
   // First should check if the spot is available to be played, then if if is the player who chooses the spot whill have their letter (x/o) applied and the player is switched.
   if (endGame) {
@@ -78,6 +92,7 @@ const playGame = function (spotRow, spotColumn, whoIs) {
       gameBoard[2][1] = whoIs
       gameBoard[2][2] = whoIs
       win(whoIs)
+      return
     }
   }
   console.log(gameBoard)
@@ -192,12 +207,8 @@ const onChangePw = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   authApi.changePw(data)
-    .then(function () {
-      console.log('response is ', data)
-    })
-    .catch(function (error) {
-      console.log('response is ', error)
-    })
+    .then(authUi.passwordPass)
+    .catch(authUi.passwordFail)
 }
 const onSignOut = function (event) {
   event.preventDefault()
@@ -205,6 +216,9 @@ const onSignOut = function (event) {
   authApi.signOut()
     .then(authUi.signOutSuccess)
     .catch(authUi.signOutFailure)
+
+  playerX = 0
+  playerO = 0
 }
 const onPlayAgain = function (event) {
   event.preventDefault()
