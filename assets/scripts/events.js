@@ -78,6 +78,8 @@ const playGame = function (spotRow, spotColumn, whoIs) {
     if (endGame === false && typeof gameBoard[0][0] === 'string' && typeof gameBoard[0][1] === 'string' && typeof gameBoard[0][2] === 'string' && typeof gameBoard[1][0] === 'string' && typeof gameBoard[1][1] === 'string' && typeof gameBoard[1][2] === 'string' && typeof gameBoard[2][0] === 'string' && typeof gameBoard[2][1] === 'string' && typeof gameBoard[2][2] === 'string') {
       console.log('No More Moves, Start Over')
       $('#turn').html('It\'s a tie, please play again')
+      endGame = true
+      return
     }
     // Reset the game
     if (endGame) {
@@ -110,83 +112,101 @@ const determineColor = function (spotRow, spotColumn, player) {
 const onClick1 = function () {
   const value = player
   const index = 0
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(0, 0, player))
-  playGame(0, 0, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(0, 0, player))
+    playGame(0, 0, player)
+  }
 }
 const onClick2 = function () {
   const value = player
   const index = 1
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(0, 1, player))
-  playGame(0, 1, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(0, 1, player))
+    playGame(0, 1, player)
+  }
 }
 const onClick3 = function () {
   const value = player
   const index = 2
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(0, 2, player))
-  playGame(0, 2, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(0, 2, player))
+    playGame(0, 2, player)
+  }
 }
 const onClick4 = function () {
   const value = player
   const index = 3
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(1, 0, player))
-  playGame(1, 0, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(1, 0, player))
+    playGame(1, 0, player)
+  }
 }
 const onClick5 = function () {
   const value = player
   const index = 4
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(1, 1, player))
-  playGame(1, 1, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(1, 1, player))
+    playGame(1, 1, player)
+  }
 }
 const onClick6 = function () {
   const value = player
   const index = 5
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(1, 2, player))
-  playGame(1, 2, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(1, 2, player))
+    playGame(1, 2, player)
+  }
 }
 const onClick7 = function () {
   const value = player
   const index = 6
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(2, 0, player))
-  playGame(2, 0, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(2, 0, player))
+    playGame(2, 0, player)
+  }
 }
 const onClick8 = function () {
   const value = player
   const index = 7
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(2, 1, player))
-  playGame(2, 1, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(2, 1, player))
+    playGame(2, 1, player)
+  }
 }
 const onClick9 = function () {
   const value = player
   const index = 8
-  authApi.updateGame(index, value, endGame)
-    .then(authUi.updateSuccess)
-    .catch(authUi.updateFailure)
-  $(this).css('background', determineColor(2, 2, player))
-  playGame(2, 2, player)
+  if (endGame === false) {
+    authApi.updateGame(index, value, endGame)
+      .then(authUi.updateSuccess)
+      .catch(authUi.updateFailure)
+    $(this).css('background', determineColor(2, 2, player))
+    playGame(2, 2, player)
+  }
 }
 const onSignUp = function (event) {
   event.preventDefault()
@@ -217,6 +237,32 @@ const onSignOut = function (event) {
     .then(authUi.signOutSuccess)
     .catch(authUi.signOutFailure)
 
+  $('#out-success').modal()
+  $('#scoreOne').html('')
+  $('#scoreTwo').html('')
+  $('#sign-in-button').show()
+  $('#sign-up-button').show()
+  $('.after-button').hide()
+
+  // $('.box').css('background', 'rgb(128, 128, 128)')
+  // $('.box').html('')
+  // $('#turn').html('Turn: Player One')
+  $('.box').hide()
+  $('.scores').hide()
+  $('#gameshow').hide()
+  $('#gamelog').hide()
+  $('#turn').hide()
+
+  gameBoard[0][0] = 1
+  gameBoard[0][1] = 2
+  gameBoard[0][2] = 3
+  gameBoard[1][0] = 4
+  gameBoard[1][1] = 5
+  gameBoard[1][2] = 6
+  gameBoard[2][0] = 7
+  gameBoard[2][1] = 8
+  gameBoard[2][2] = 9
+
   playerX = 0
   playerO = 0
 }
@@ -226,6 +272,11 @@ const onPlayAgain = function (event) {
   $('.box').css('background', 'rgb(128, 128, 128)')
   $('.box').html('')
   $('#turn').html('Turn: Player One')
+  $('.box').show()
+  $('.scores').show()
+  $('#gameshow').show()
+  $('#gamelog').show()
+  $('#turn').show()
 
   gameBoard[0][0] = 1
   gameBoard[0][1] = 2

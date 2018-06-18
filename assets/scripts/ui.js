@@ -13,6 +13,9 @@ const signInSuccess = function (response) {
   store.user = response.user
   // alert('Success')
   $('#sign-in-modal').modal('hide')
+  $('#sign-in-button').hide()
+  $('#sign-up-button').hide()
+  $('.after-button').show()
 }
 const signInFailure = function (signInError) {
   console.log('The sign in error is ', signInError)
@@ -22,9 +25,6 @@ const signOutSuccess = function (response) {
   console.log('Goodbye ', response)
   delete store.user
   console.log('the new store is ', store)
-  $('#out-success').modal()
-  $('#scoreOne').html('')
-  $('#scoreTwo').html('')
 }
 const signOutFailure = function (signOutError) {
   console.log('The sign in error is ', signOutError)

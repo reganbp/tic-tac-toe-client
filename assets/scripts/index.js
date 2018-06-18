@@ -8,6 +8,12 @@ const authEvents = require('./events')
 
 $(() => {
 // your JS code goes here
+  $('.after-button').hide()
+  $('.box').hide()
+  $('.scores').hide()
+  $('#gameshow').hide()
+  $('#gamelog').hide()
+  $('#turn').hide()
   $('#ticOne').on('click', authEvents.onClick1)
   $('#ticTwo').on('click', authEvents.onClick2)
   $('#ticThree').on('click', authEvents.onClick3)
@@ -20,7 +26,7 @@ $(() => {
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePw)
-  $('#sign-out').on('click', authEvents.onSignOut)
+  $('#sign-out-button').on('click', authEvents.onSignOut)
   $('.play-again').on('click', authEvents.onPlayAgain)
   $('#username').on('click', authEvents.onUsername)
   $('.get-games').on('click', authEvents.onGetGame)
