@@ -112,100 +112,118 @@ const determineColor = function (spotRow, spotColumn, player) {
 const onClick1 = function () {
   const value = player
   const index = 0
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[0][0] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(0, 0, player))
     playGame(0, 0, player)
+  } else if (endGame === false && typeof gameBoard[0][0] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick2 = function () {
   const value = player
   const index = 1
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[0][1] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(0, 1, player))
     playGame(0, 1, player)
+  } else if (endGame === false && typeof gameBoard[0][1] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick3 = function () {
   const value = player
   const index = 2
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[0][2] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(0, 2, player))
     playGame(0, 2, player)
+  } else if (endGame === false && typeof gameBoard[0][2] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick4 = function () {
   const value = player
   const index = 3
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[1][0] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(1, 0, player))
     playGame(1, 0, player)
+  } else if (endGame === false && typeof gameBoard[1][0] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick5 = function () {
   const value = player
   const index = 4
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[1][1] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(1, 1, player))
     playGame(1, 1, player)
+  } else if (endGame === false && typeof gameBoard[1][1] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick6 = function () {
   const value = player
   const index = 5
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[1][2] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(1, 2, player))
     playGame(1, 2, player)
+  } else if (endGame === false && typeof gameBoard[1][2] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick7 = function () {
   const value = player
   const index = 6
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[2][0] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(2, 0, player))
     playGame(2, 0, player)
+  } else if (endGame === false && typeof gameBoard[2][0] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick8 = function () {
   const value = player
   const index = 7
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[2][1] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(2, 1, player))
     playGame(2, 1, player)
+  } else if (endGame === false && typeof gameBoard[2][1] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onClick9 = function () {
   const value = player
   const index = 8
-  if (endGame === false) {
+  if (endGame === false && typeof gameBoard[2][2] !== 'string') {
     authApi.updateGame(index, value, endGame)
       .then(authUi.updateSuccess)
       .catch(authUi.updateFailure)
     $(this).css('background', determineColor(2, 2, player))
     playGame(2, 2, player)
+  } else if (endGame === false && typeof gameBoard[2][2] === 'string') {
+    $('#turn').html('You cannot move there, try again')
   }
 }
 const onSignUp = function (event) {
