@@ -18,12 +18,12 @@ const win = function (winner) {
     // $('.box').html('Black Squares Win!!!!')
     $('#turn').html('Player One is the winner!!')
     playerX++
-    console.log(playerX)
+    // console.log(playerX)
   } else {
     // $('.box').html('White Squares Win!!!!')
     $('#turn').html('Player Two is the winner!!')
     playerO++
-    console.log(playerO)
+    // console.log(playerO)
   }
   $('.box').css('background', '#b92f2f')
   $('#ticOne').html('Y')
@@ -46,44 +46,44 @@ const playGame = function (spotRow, spotColumn, whoIs) {
     $('#turn').html('Turn: Player One')
   }
   if (typeof gameBoard[spotRow][spotColumn] === 'string') {
-    console.log('You cannot move there, try again')
+    // console.log('You cannot move there, try again')
     $('#turn').html('You cannot move there, try again')
   } else {
     gameBoard[spotRow][spotColumn] = whoIs
     if (whoIs === playerOne) {
       player = playerTwo
-      console.log('changing turn', player)
+      // console.log('changing turn', player)
     } else {
       player = playerOne
-      console.log('changing turn', player)
+      // console.log('changing turn', player)
     }
-    console.log(gameBoard)
+    // console.log(gameBoard)
   }
   // Second, check to see for winner, if there is one, end the game
   for (let i = 0; i < gameBoard.length; i++) {
     if ((gameBoard[0][i] === gameBoard[1][i]) && (gameBoard[0][i] === gameBoard[2][i])) {
-      console.log(whoIs, 'wins!')
+      // console.log(whoIs, 'wins!')
       endGame = true
     } else if ((gameBoard[i][0] === gameBoard[i][1]) && (gameBoard[i][0] === gameBoard[i][2])) {
-      console.log(whoIs, 'wins?')
+      // console.log(whoIs, 'wins?')
       endGame = true
     } else if ((gameBoard[2][0] === gameBoard[0][2]) && (gameBoard[2][i] === gameBoard[1][1])) {
-      console.log(whoIs, 'wins.')
+      // console.log(whoIs, 'wins.')
       endGame = true
     } else if ((gameBoard[0][0] === gameBoard[1][1]) && (gameBoard[1][1] === gameBoard[2][2])) {
-      console.log(whoIs, 'wins')
+      // console.log(whoIs, 'wins')
       endGame = true
     }
     // if not, tell them to play again
     if (endGame === false && typeof gameBoard[0][0] === 'string' && typeof gameBoard[0][1] === 'string' && typeof gameBoard[0][2] === 'string' && typeof gameBoard[1][0] === 'string' && typeof gameBoard[1][1] === 'string' && typeof gameBoard[1][2] === 'string' && typeof gameBoard[2][0] === 'string' && typeof gameBoard[2][1] === 'string' && typeof gameBoard[2][2] === 'string') {
-      console.log('No More Moves, Start Over')
+      // console.log('No More Moves, Start Over')
       $('#turn').html('It\'s a tie, please play again')
       endGame = true
       return
     }
     // Reset the game
     if (endGame) {
-      console.log(whoIs, 'set who is')
+      // console.log(whoIs, 'set who is')
       gameBoard[0][0] = whoIs
       gameBoard[0][1] = whoIs
       gameBoard[0][2] = whoIs
@@ -97,7 +97,7 @@ const playGame = function (spotRow, spotColumn, whoIs) {
       return
     }
   }
-  console.log(gameBoard)
+  // console.log(gameBoard)
 }
 const determineColor = function (spotRow, spotColumn, player) {
   if (typeof gameBoard[spotRow][spotColumn] === 'string') {
@@ -236,7 +236,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('data is ', data)
+  // console.log('data is ', data)
   authApi.signIn(data)
     .then(authUi.signInSuccess)
     .catch(authUi.signInFailure)
@@ -287,7 +287,7 @@ const onSignOut = function (event) {
 }
 const onPlayAgain = function (event) {
   event.preventDefault()
-  console.log('you clicked me')
+  // console.log('you clicked me')
   $('.box').css('background', 'rgb(128, 128, 128)')
   $('.box').html('')
   $('#turn').html('Turn: Player One')
@@ -310,7 +310,7 @@ const onPlayAgain = function (event) {
   player = playerOne
   endGame = false
 
-  console.log(gameBoard)
+  // console.log(gameBoard)
 
   authApi.newGame()
     .then(authUi.newGameSuccess)

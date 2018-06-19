@@ -17,8 +17,8 @@ const signIn = function (data) {
   })
 }
 const changePw = function (data) {
-  console.log('store is ', store)
-  console.log('token is ', store.user.token)
+  // console.log('store is ', store)
+  // console.log('token is ', store.user.token)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
@@ -47,8 +47,8 @@ const newGame = function () {
   })
 }
 const updateGame = function (index, value, endGame) {
-  console.log(index, value, endGame)
-  console.log(store.game)
+  // console.log(index, value, endGame)
+  // console.log(store.game)
   if (endGame === false) {
     return $.ajax({
       method: 'PATCH',
@@ -69,7 +69,7 @@ const updateGame = function (index, value, endGame) {
   }
 }
 const getGame = function () {
-  console.log('did I get game?')
+  // console.log('did I get game?')
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/games',
