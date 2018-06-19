@@ -3,16 +3,19 @@ const store = require('./store')
 const signUpSuccess = function (signUpResponse) {
   console.log('signUpResponse ', signUpResponse)
   $('#sign-up-modal').modal('hide')
+  document.getElementById('sign-up-form').reset()
 }
 const signUpFailure = function (signUpError) {
   console.log('The sign up error is ', signUpError)
   $('#form-fail').modal()
+  document.getElementById('sign-up-form').reset()
 }
 const signInSuccess = function (response) {
   console.log('response ', response)
   store.user = response.user
   // alert('Success')
   $('#sign-in-modal').modal('hide')
+  document.getElementById('sign-in-form').reset()
   $('#sign-in-button').hide()
   $('#sign-up-button').hide()
   $('.after-button').show()
@@ -21,6 +24,7 @@ const signInSuccess = function (response) {
 const signInFailure = function (signInError) {
   console.log('The sign in error is ', signInError)
   $('#form-fail').modal()
+  document.getElementById('sign-in-form').reset()
 }
 const signOutSuccess = function (response) {
   console.log('Goodbye ', response)
@@ -56,9 +60,11 @@ const getGameFailure = function (getResponse) {
 }
 const passwordPass = function () {
   $('#password-modal').modal('hide')
+  document.getElementById('change-password-form').reset()
 }
 const passwordFail = function () {
   $('#pass-fail').modal()
+  document.getElementById('change-password-form').reset()
 }
 
 module.exports = {
