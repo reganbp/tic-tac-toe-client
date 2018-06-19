@@ -261,14 +261,15 @@ const onSignOut = function (event) {
   $('#sign-in-button').show()
   $('#sign-up-button').show()
   $('.after-button').hide()
+  $('#welcome').html('Please log in')
 
   // $('.box').css('background', 'rgb(128, 128, 128)')
   // $('.box').html('')
   // $('#turn').html('Turn: Player One')
   $('.box').hide()
   $('.scores').hide()
-  $('#gameshow').hide()
-  $('#gamelog').hide()
+  $('#gameshow').hide().html('')
+  $('#gamelog').hide().html('')
   $('#turn').hide()
 
   gameBoard[0][0] = 1

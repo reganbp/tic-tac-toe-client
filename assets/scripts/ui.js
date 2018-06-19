@@ -16,6 +16,7 @@ const signInSuccess = function (response) {
   $('#sign-in-button').hide()
   $('#sign-up-button').hide()
   $('.after-button').show()
+  $('#welcome').html('Click on New Game to play!')
 }
 const signInFailure = function (signInError) {
   console.log('The sign in error is ', signInError)
