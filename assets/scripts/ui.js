@@ -4,6 +4,7 @@ const signUpSuccess = function (signUpResponse) {
   // console.log('signUpResponse ', signUpResponse)
   $('#sign-up-modal').modal('hide')
   document.getElementById('sign-up-form').reset()
+  $('#in-success').modal()
 }
 const signUpFailure = function (signUpError) {
   // console.log('The sign up error is ', signUpError)
@@ -16,6 +17,7 @@ const signInSuccess = function (response) {
   // alert('Success')
   $('#sign-in-modal').modal('hide')
   document.getElementById('sign-in-form').reset()
+  $('#in-success').modal()
   $('#sign-in-button').hide()
   $('#sign-up-button').hide()
   $('.after-button').show()
@@ -52,15 +54,18 @@ const updateFailure = function (updateResponse) {
 }
 const getGameSuccess = function (getResponse) {
   // console.log('get game is', getResponse)
-  $('#gameshow').html('Games played: ' + getResponse.games.length)
+  // $('#get-game-success').modal()
+  $('#gameshow').html('Games played: ' + getResponse.games.length).show()
 }
 const getGameFailure = function (getResponse) {
   // console.log('failed to get games', getResponse)
-  $('#gameshow').html('You have no games')
+  $('#gameshow').html('You have no games').show()
+  // $('#get-game-success').modal()
 }
 const passwordPass = function () {
   $('#password-modal').modal('hide')
   document.getElementById('change-password-form').reset()
+  $('#in-success').modal()
 }
 const passwordFail = function () {
   $('#pass-fail').modal()

@@ -318,7 +318,6 @@ const onPlayAgain = function (event) {
 }
 const onGetGame = function (event) {
   event.preventDefault()
-  console.log('get games clicked')
   authApi.getGame()
     .then(authUi.getGameSuccess)
     .catch(authUi.getGameFailure)
