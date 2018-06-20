@@ -293,8 +293,8 @@ const onPlayAgain = function (event) {
   $('#turn').html('Turn: Player One')
   $('.box').show()
   $('.scores').show()
-  $('#gameshow').show()
-  $('#gamelog').show()
+  $('#gameshow').hide()
+  $('#gamelog').hide()
   $('#turn').show()
 
   gameBoard[0][0] = 1
