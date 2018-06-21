@@ -262,6 +262,9 @@ const onSignOut = function (event) {
   $('#sign-up-button').show()
   $('.after-button').hide()
   $('#welcome').html('Please log in')
+  document.getElementById('sign-in-form').reset()
+  document.getElementById('sign-up-form').reset()
+  document.getElementById('change-password-form').reset()
 
   // $('.box').css('background', 'rgb(128, 128, 128)')
   // $('.box').html('')
