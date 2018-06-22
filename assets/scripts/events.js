@@ -299,6 +299,7 @@ const onPlayAgain = function (event) {
   $('#gameshow').hide()
   $('#gamelog').hide()
   $('#turn').show()
+  document.getElementById('change-password-form').reset()
 
   gameBoard[0][0] = 1
   gameBoard[0][1] = 2

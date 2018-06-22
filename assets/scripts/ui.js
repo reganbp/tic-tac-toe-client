@@ -4,12 +4,14 @@ const signUpSuccess = function (signUpResponse) {
   // console.log('signUpResponse ', signUpResponse)
   $('#sign-up-modal').modal('hide')
   document.getElementById('sign-up-form').reset()
+  document.getElementById('sign-in-form').reset()
   $('#in-success').modal()
 }
 const signUpFailure = function (signUpError) {
   // console.log('The sign up error is ', signUpError)
   $('#form-fail').modal()
   document.getElementById('sign-up-form').reset()
+  document.getElementById('sign-in-form').reset()
 }
 const signInSuccess = function (response) {
   // console.log('response ', response)
@@ -17,6 +19,7 @@ const signInSuccess = function (response) {
   // alert('Success')
   $('#sign-in-modal').modal('hide')
   document.getElementById('sign-in-form').reset()
+  document.getElementById('sign-up-form').reset()
   $('#in-success').modal()
   $('#sign-in-button').hide()
   $('#sign-up-button').hide()
@@ -27,6 +30,7 @@ const signInFailure = function (signInError) {
   // console.log('The sign in error is ', signInError)
   $('#form-fail').modal()
   document.getElementById('sign-in-form').reset()
+  document.getElementById('sign-up-form').reset()
 }
 const signOutSuccess = function (response) {
   // console.log('Goodbye ', response)
