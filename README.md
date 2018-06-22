@@ -2,7 +2,7 @@ This is a simple Tic-Tac-Toe game Single Page Application.
 ---
 Planning
 
-This project was planned with a few simple steps.  First was to create user stories to figure out what I would want in this page if I came across it.  After asking what the user would want, I designed wireframes to try and see what the page should look like.  Then it was time to lay out a schedule and task list, step by step, for how the project should be completed in an effecient way. I wanted to set up tasks that were small enough to be completed, and if done in order would build the larger application.  For this project, I attempted my tasks in the following order.
+This project was planned with a few simple steps.  First was to create user stories to figure out what I would want in this page if I came across it (see bottom of page).  After asking what the user would want, I designed wireframes to try and see what the page should look like.  Then it was time to lay out a schedule and task list, step by step, for how the project should be completed in an effecient way. I wanted to set up tasks that were small enough to be completed, and if done in order would build the larger application.  For this project, I attempted my tasks in the following order.
 
   - Build a game board in JavaScript
   - Build a functioning game program in JavaScript
@@ -59,3 +59,14 @@ Wireframes
 ![WIreFrame 1](https://i.imgur.com/3v3Iwey.jpg)
 ![WIreFrame 2](https://i.imgur.com/Mzjw9AO.jpg)
 ![WireFrame3](https://i.imgur.com/BjWB3YH.jpg)
+
+---
+User Stories
+
+As a user of this game I would like...
+  - To be able to save scores
+  - See a top score list
+  - Share scores with other users
+  - Play against the computer
+  - Message or comment to other users
+  - Customize my game (change X's and O's to something else)
