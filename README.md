@@ -17,6 +17,7 @@ This project was planned with a few simple steps.  First was to create user stor
     - Sign Out
   - Fix bugs
   - Update styling
+
 ---
 Development
 
@@ -29,10 +30,12 @@ Authentication was added to save user information such as their log in informati
 Debugging the program took the longest time complete, as every bug fixed would often cause another bug to appear.  I tried to systematically solve these bugs one at a time.  For example, the game was still allowed to be played after a winning combination was found, which was both apparent in the JavaScript engine and on the screen display.  I decided it would be better to solve the game engine problem first, instead of trying to make it appear on the screen as if the game was truly over.  This was because it was more important that the game program was running correctly than that the right display appeared.  If the game engine was fixed I assumed it would be easier to display the corresponding view.  This of course added other bugs to the application (for example it would now throw an error for clicking on a square that was unavailable).  This is just one example, but it is representative of how I tried to break down problems to get the application to run smoothly.
 
 Styling was added as needed during the development.  There were times when updated styling was required to help show actions that were completed.  While I had planned to leave this part for the end, it was more prudent to update as I went along and added more jQuery into the program.
+
 ---
 Unsolved Problems and Future Fixes
 
 There were many parts of this game that I would have completed in a different way if I were to update.  One problem I had was that I was forced to hard code in many actions, when I am sure there was a more general way to do it.  For example, I needed event listeners for each square, even though they were all of the same class and performed the same functions.  I would like to get this down to one event listener that would change the game board for any square clicked instead of a listner that was only good for one square.  I would also fix my gameboard to change it from a 2d array down to a flat array.  I believe this would help with the click handling and it would also correspond with the expected input for the updated game array.
+
 ---
 Technologies
 
@@ -49,6 +52,7 @@ Technologies
   - in conjuntion with jQuery to update as the user interacted
 - Shell commands
   - curl scripts to test authentication calls for expected inputs
+
 ---
 Wireframes
 
