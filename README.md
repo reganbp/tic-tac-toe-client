@@ -56,9 +56,9 @@ Technologies
 ---
 Wireframes
 
-![WIreFrame 1](https://i.imgur.com/3v3Iwey.jpg)
-![WIreFrame 2](https://i.imgur.com/Mzjw9AO.jpg)
-![WireFrame3](https://i.imgur.com/BjWB3YH.jpg)
+[WIreFrame 1](https://i.imgur.com/3v3Iwey.jpg)
+[WIreFrame 2](https://i.imgur.com/Mzjw9AO.jpg)
+[WireFrame 3](https://i.imgur.com/BjWB3YH.jpg)
 
 ---
 User Stories
